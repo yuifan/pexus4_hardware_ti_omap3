@@ -1,7 +1,7 @@
 ifneq ($(BUILD_WITHOUT_PV),true)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
-LOCAL_PRELINK_MODULE := false
+
 LOCAL_SRC_FILES := src/ti_omx_interface.cpp
 
 LOCAL_MODULE := libVendor_ti_omx
@@ -34,7 +34,7 @@ LOCAL_ARM_MODE := arm
 LOCAL_C_INCLUDES := \
     $(PV_INCLUDES)
 
-LOCAL_SHARED_LIBRARIES := libOMX_Core
+LOCAL_SHARED_LIBRARIES := libOMX_Core liblog
 
 -include $(PV_TOP)/Android_platform_extras.mk
 

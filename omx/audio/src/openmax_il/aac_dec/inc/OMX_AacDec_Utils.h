@@ -264,7 +264,7 @@
     #define AACDEC_MEMPRINT(...)
 #endif
 
-#define AACDEC_EPRINT LOGE
+#define AACDEC_EPRINT ALOGE
 
 #endif
 
@@ -536,6 +536,10 @@ typedef enum {
     IUALG_CMD_SETSTATUS     = 3,
     IUALG_CMD_USERCMDSTART_AACDEC  = 100
 }IUALG_Cmd_AAC_DEC;
+
+typedef enum{
+  IAAC_WARN_DATA_CORRUPT = 0x0804
+}IAAC_WARN_MSG;
 
 #ifdef UNDER_CE
 #ifndef _OMX_EVENT_
